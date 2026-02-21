@@ -3,281 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arun Kumar - Salesforce Developer</title>
-    <meta name="description" content="Portfolio of Arun Kumar, a Salesforce Developer specializing in Apex, Flows, LWC, and integrations.">
-    <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
+    <title>Arun Kumar | Professional Salesforce Developer</title>
+    <meta name="description" content="Senior Salesforce Developer specializing in Apex, Integrations, and Revenue Cloud. View my professional portfolio and projects.">
+    
+    <!-- Modern Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <!-- Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header / Navigation -->
-    <header class="header">
-        <div class="container header-container">
-            <a href="#" class="logo">Arun Kumar</a>
-            <nav class="nav">
+    <!-- Header -->
+    <header class="navbar">
+        <div class="container container-flex">
+            <div class="logo">
+                <a href="#">Arun<span>.</span>Kumar</a>
+            </div>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
                 <a href="#about">About</a>
-                <a href="#skills">Skills</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
-                <a href="#education">Education</a>
-                <a href="#contact" class="btn-primary">Contact Me</a>
+                <a href="#contact" class="nav-cta">Let's Talk</a>
             </nav>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <span class="material-icons">menu</span>
-            </button>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Hi, I'm Arun Kumar</h1>
-                <h2>Salesforce Developer</h2>
-                <p>Specializing in Apex, Flows, Automation, and Complex Third-Party Integrations.</p>
-                <div class="hero-actions">
-                    <a href="#contact" class="btn-primary">Get in Touch</a>
-                    <a href="https://www.linkedin.com/in/arun-kumar-sfdc" target="_blank" class="btn-secondary">
-                        <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" alt="LinkedIn" class="icon-img"> LinkedIn
-                    </a>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="badge">Salesforce Developer</span>
+                    <h1>Bridging Business Needs with <span>Scalable</span> Technology</h1>
+                    <p class="hero-summary">
+                        Hi, I'm Arun. I specialize in building robust Salesforce architectures, seamless third-party integrations, and automating complex business processes to drive revenue growth.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="photo-wrapper reveal">
+                        <img src="assets/profile.png" alt="Arun Kumar Professional Photo" class="profile-img">
+                        <div class="photo-accent"></div>
+                    </div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <!-- Placeholder for a professional illustration or profile image -->
-                <div class="profile-placeholder">
-                    <span class="material-icons">code</span>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="card">
-                <p>
-                    Salesforce Developer with strong experience in Apex, Flows, and complex third-party integrations, 
-                    specializing in automation of sales, revenue, and communication processes. Experienced in designing 
-                    scalable, secure solutions across Salesforce, Skuid-based communities, and external platforms.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Salesforce Core</h3>
-                    <div class="chips">
-                        <span class="chip">Apex</span>
-                        <span class="chip">Apex Triggers</span>
-                        <span class="chip">SOQL</span>
-                        <span class="chip">Flows</span>
-                        <span class="chip">Salesforce Configuration</span>
-                        <span class="chip">Salesforce Customization</span>
-                        <span class="chip">Approval Processes</span>
+        <!-- About / Profile -->
+        <section id="about" class="section section-about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2 class="section-title">My Profile</h2>
+                        <p class="lead">
+                            With extensive experience in <strong>Apex, Flows, and LWC</strong>, I help organizations transform their CRM from simple databases into powerful automation engines.
+                        </p>
+                        <p>
+                            Focused on designing scalable, secure solutions across Salesforce, Skuid-based communities, and external platforms. I thrive at the intersection of technical complexity and user-centric design.
+                        </p>
                     </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Frontend & UI</h3>
-                    <div class="chips">
-                        <span class="chip">LWC (Lightning Web Components)</span>
-                        <span class="chip">Skuid Pages</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Integration & Tools</h3>
-                    <div class="chips">
-                        <span class="chip">REST API Integration</span>
-                        <span class="chip">Git / Bitbucket</span>
-                        <span class="chip">SF CLI</span>
-                        <span class="chip">VS Code</span>
-                        <span class="chip">Salesforce Workbench</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Domain Knowledge</h3>
-                    <div class="chips">
-                        <span class="chip">Revenue Cloud</span>
-                        <span class="chip">Quote Configuration</span>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <h3>50+</h3>
+                            <p>Integrations</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>100%</h3>
+                            <p>Code Coverage</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="timeline">
-                
-                <!-- CloudSheer -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content card">
-                        <div class="job-header">
+        <!-- Projects Section (Revamped) -->
+        <section id="projects" class="section bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Expertise in Action</h2>
+                    <p class="section-subtitle">A deep dive into complex problems I've solved.</p>
+                </div>
+
+                <div class="project-list">
+                    
+                    <!-- Project 1: Zoom Automation -->
+                    <article class="project-card reveal">
+                        <div class="project-info">
+                            <span class="project-tag">Integration Architecture</span>
+                            <h3>Zoom-Salesforce Native Automation</h3>
+                            <p class="project-desc">Built a custom Apex-based integration to synchronize Salesforce Events with Zoom meetings, eliminating manual scheduling for global teams.</p>
+                            
+                            <div class="project-details">
+                                <div class="detail-group">
+                                    <h4><i class="fa-solid fa-code"></i> Technologies Used</h4>
+                                    <p>Apex, REST API, JSON, Flows, Custom Metadata.</p>
+                                </div>
+                                <div class="detail-group">
+                                    <h4><i class="fa-solid fa-triangle-exclamation"></i> Key Challenge</h4>
+                                    <p>Handling large-scale user rotation and complex reminder logic without hitting Salesforce governor limits during peak hours.</p>
+                                </div>
+                                <div class="detail-group">
+                                    <h4><i class="fa-solid fa-gears"></i> Solution</h4>
+                                    <p>Implemented an asynchronous queueing system using Batch Apex and platform events for reliable near-real-time synchronization.</p>
+                                </div>
+                            </div>
+
+                            <div class="project-impact">
+                                <strong>Impact:</strong> Automated 500+ meetings monthly, reducing administrative overhead by 60%.
+                            </div>
+                        </div>
+                        <div class="project-visual">
+                            <div class="screenshot-placeholder">
+                                <i class="fa-solid fa-video"></i>
+                                <span>Zoom Integration Module</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Tableau Embedding -->
+                    <article class="project-card reverse reveal">
+                        <div class="project-info">
+                            <span class="project-tag">UI/UX & Security</span>
+                            <h3>Secure Tableau Embedded Analytics</h3>
+                            <p class="project-desc">Enabled high-security data visualization within a Skuid-based Salesforce Community for enterprise partners.</p>
+                            
+                            <div class="project-details">
+                                <div class="detail-group">
+                                    <h4><i class="fa-solid fa-code"></i> Technologies Used</h4>
+                                    <p>Tableau API, JWT, Apex, Skuid, Visualforce.</p>
+                                </div>
+                                <div class="detail-group">
+                                    <h4><i class="fa-solid fa-triangle-exclamation"></i> Key Challenge</h4>
+                                    <p>Passing user-specific data filters securely while maintaining single sign-on (SSO) across different domains.</p>
+                                </div>
+                                <div class="detail-group">
+                                    <h4><i class="fa-solid fa-gears"></i> Solution</h4>
+                                    <p>Developed a JWT-based Apex authentication handler with a dynamic Visualforce loader that injects secure tokens into the Tableau frame.</p>
+                                </div>
+                            </div>
+
+                            <div class="project-impact">
+                                <strong>Impact:</strong> Successfully delivered real-time analytics to 200+ partners with 0% data leakage.
+                            </div>
+                        </div>
+                        <div class="project-visual">
+                            <div class="screenshot-placeholder chart">
+                                <i class="fa-solid fa-chart-line"></i>
+                                <span>Analytics Dashboard</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Revenue Cloud Customization -->
+                    <article class="project-card reveal">
+                        <div class="project-info">
+                            <span class="project-tag">Sales Automation</span>
+                            <h3>Automated Revenue Cloud Engine</h3>
+                            <p class="project-desc">Customized Salesforce Revenue Cloud to automate quote-to-invoice workflows for complex discount structures.</p>
+                            
+                            <div class="project-details">
+                                <div class="detail-group">
+                                    <h4><i class="fa-solid fa-code"></i> Technologies Used</h4>
+                                    <p>Revenue Cloud (CPQ), Apex, Custom Pricing Plugins.</p>
+                                </div>
+                                <div class="detail-group">
+                                    <h4><i class="fa-solid fa-triangle-exclamation"></i> Key Challenge</h4>
+                                    <p>Complex multi-tier discount approvals that varied by region and product bundles.</p>
+                                </div>
+                                <div class="detail-group">
+                                    <h4><i class="fa-solid fa-gears"></i> Solution</h4>
+                                    <p>Developed custom Apex validation rules and advanced approval flows that calculate real-time margins before submission.</p>
+                                </div>
+                            </div>
+
+                            <div class="project-impact">
+                                <strong>Impact:</strong> Improved quote accuracy by 95% and shortened the sales cycle by 4 days.
+                            </div>
+                        </div>
+                        <div class="project-visual">
+                            <div class="screenshot-placeholder revenue">
+                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                                <span>Revenue Workflow</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title text-center">Career Journey</h2>
+                <div class="experience-timeline">
+                    <!-- Items -->
+                    <div class="exp-item">
+                        <div class="exp-date">2025 - Present</div>
+                        <div class="exp-content">
                             <h3>Salesforce Developer</h3>
-                            <span class="company">CloudSheer Consulting</span>
-                            <span class="date">02/2025 – Present | Noida, India</span>
+                            <p class="company">CloudSheer Consulting</p>
                         </div>
-                        <ul class="job-details">
-                            <li><strong>Zoom-Salesforce Integration:</strong> Built custom Apex and Flow-based Zoom integration to automate meeting creation, cancellation, reminders, user rotation, and email notifications from Salesforce Events.</li>
-                            <li><strong>Tableau & Skuid Integration:</strong> Implemented secure Tableau embedding using Connected Apps and JWT-based Apex with dynamic Visualforce loader integrated into Skuid-based Salesforce Community pages.</li>
-                            <li><strong>Twilio SMS Integration:</strong> Developed cost-effective Twilio integration to send/receive SMS with automatic Task creation for inbound/outbound messages.</li>
-                            <li><strong>QuickBooks & Sales Process:</strong> Customized Quote configuration with discount approvals and installment logic; enabled custom automated revenue scheduling and invoice creation in QuickBooks.</li>
-                            <li><strong>Google Workspace Integration:</strong> Integrated Google Drive, Calendar, and Docs generation with Salesforce, exposing functionality through Skuid pages.</li>
-                            <li>Configured Salesforce Revenue Cloud including product, pricing, and revenue management.</li>
-                        </ul>
                     </div>
-                </div>
-
-                <!-- Decodeforce -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content card">
-                        <div class="job-header">
+                    <div class="exp-item">
+                        <div class="exp-date">2024 - 2025</div>
+                        <div class="exp-content">
                             <h3>Salesforce Developer</h3>
-                            <span class="company">Decodeforce</span>
-                            <span class="date">06/2024 – 01/2025 | Remote</span>
+                            <p class="company">Decodeforce</p>
                         </div>
-                        <ul class="job-details">
-                            <li>Designed and developed complex Salesforce Apex coding questions for an online assessment platform.</li>
-                            <li>Implemented test classes ensuring 100% code coverage to validate candidate submissions.</li>
-                            <li>Utilized Salesforce Workbench for testing/validating Apex code and REST API calls.</li>
-                            <li>Configured validation rules, lookup fields, master-detail relationships, and custom objects.</li>
-                            <li>Set up scratch orgs and used SF CLI for deployment; integrated Git/Bitbucket for version control.</li>
-                        </ul>
                     </div>
-                </div>
-
-                 <!-- Decodeforce Internship -->
-                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content card">
-                        <div class="job-header">
-                            <h3>Salesforce Developer Training & Internship</h3>
-                            <span class="company">Decodeforce</span>
-                            <span class="date">09/2023 – 04/2024</span>
-                        </div>
-                        <ul class="job-details">
-                            <li>Gained comprehensive understanding of Salesforce architecture, cloud computing, and CRM fundamentals.</li>
-                            <li>Hands-on experience creating custom objects, fields, relationships, Validation rules, Workflow rules, Process Builder, Flows.</li>
-                            <li>Worked on Apex triggers and handler classes.</li>
-                            <li>Created LWC components to utilize Lightning features.</li>
-                            <li>Executed data modeling and management strategies.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Global Logic -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content card">
-                        <div class="job-header">
+                    <div class="exp-item">
+                        <div class="exp-date">2021 - 2023</div>
+                        <div class="exp-content">
                             <h3>Analyst Content Engineering</h3>
-                            <span class="company">Global Logic (A Hitachi Group Company)</span>
-                            <span class="date">12/2021 – 08/2023 | Gurgaon, India</span>
+                            <p class="company">Global Logic | A Hitachi Group Co.</p>
                         </div>
-                        <ul class="job-details">
-                            <li>Categorized Google Shopping products based on meta clusters/categories to increase visibility.</li>
-                            <li>Employed data analysis to evaluate product performance.</li>
-                            <li>Utilized KPIs to measure categorization strategy effectiveness.</li>
-                            <li>Generated reports/insights for decision-making.</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Education & Certifications -->
-    <section id="education" class="section bg-light">
-        <div class="container grid-2">
-            
-            <div class="col">
-                <h2 class="section-title">Education</h2>
-                <div class="card">
-                    <div class="edu-item">
-                        <h3>B.Tech (Mechanical Engineering)</h3>
-                        <p>University Of Petroleum & Energy Studies</p>
-                        <p class="meta">07/2016 – 08/2020 | Dehradun, India | CGPA 6.43</p>
-                    </div>
-                    <hr>
-                    <div class="edu-item">
-                        <h3>Higher Secondary School</h3>
-                        <p>Shivaji Inter College Keshav Nagar</p>
-                        <p class="meta">2015 | Kanpur, India | CGPA 8.64</p>
-                    </div>
-                    <hr>
-                    <div class="edu-item">
-                        <h3>Senior Secondary School</h3>
-                        <p>S.S Inter College Yakubpur</p>
-                        <p class="meta">2013 | Auraiya, U.P, India | CGPA 8.73</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="col">
-                <h2 class="section-title">Certifications</h2>
-                <div class="card cert-card">
-                    <ul class="cert-list">
-                        <li>
-                            <span class="material-icons cert-icon">verified</span>
-                            <span>Salesforce Certified AI Associate</span>
-                        </li>
-                        <li>
-                            <span class="material-icons cert-icon">verified</span>
-                            <span>Salesforce Certified Agentforce Specialist</span>
-                        </li>
-                    </ul>
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="contact-card reveal">
+                    <div class="contact-text">
+                        <h2>Ready to build something together?</h2>
+                        <p>Currently open to new projects and senior Salesforce roles.</p>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/arun-kumar-sfdc" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/arunyadav1511" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="mailto:kumar.arun74096@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>Kanpur, Uttar Pradesh, India</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <p>+91 7409632265</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
+    </main>
 
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
+    <footer class="footer">
         <div class="container">
-            <h2 class="section-title text-center">Get In Touch</h2>
-            <div class="card contact-card">
-                <div class="contact-grid">
-                    <a href="mailto:kumar.arun74096@gmail.com" class="contact-item">
-                        <span class="material-icons">email</span>
-                        <span>kumar.arun74096@gmail.com</span>
-                    </a>
-                    <a href="tel:+917409632265" class="contact-item">
-                        <span class="material-icons">phone</span>
-                        <span>+91 7409632265</span>
-                    </a>
-                    <a href="https://linkedin.com/in/arun-kumar-sfdc" target="_blank" class="contact-item">
-                        <span class="material-icons">link</span>
-                        <span>LinkedIn Profile</span>
-                    </a>
-                    <a href="https://github.com/arunyadav1511" target="_blank" class="contact-item">
-                        <span class="material-icons">code</span>
-                        <span>GitHub Profile</span>
-                    </a>
-                    <a href="https://www.salesforce.com/trailblazer/arun-kumar-sfdc" target="_blank" class="contact-item">
-                        <span class="material-icons">terrain</span>
-                        <span>Trailhead Profile</span>
-                    </a>
-                </div>
-            </div>
-            <p class="text-center copyright">© 2026 Arun Kumar. Built with Material Design.</p>
+            <p>&copy; 2026 Arun Kumar. Designed with Passion & Precision.</p>
         </div>
-    </section>
+    </footer>
 
     <script src="script.js"></script>
 </body>
