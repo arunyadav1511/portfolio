@@ -4,11 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabLinks = document.querySelectorAll('.tab-link');
     const tabContents = document.querySelectorAll('.tab-content');
 
-    function switchTab(tabId) {
+    function switchTab(tabId, immediate = false) {
         // Remove active class from all links and contents
         tabLinks.forEach(link => link.classList.remove('active'));
         tabContents.forEach(content => {
             content.classList.remove('active');
+            if (immediate) {
+                content.style.transition = 'none';
+            }
         });
 
         // Add active class to targeted tab
@@ -19,14 +22,23 @@ document.addEventListener('DOMContentLoaded', () => {
             targetTab.classList.add('active');
             targetLinks.forEach(l => l.classList.add('active'));
             
+            // Re-enable transition after immediate switch
+            if (immediate) {
+                setTimeout(() => {
+                    tabContents.forEach(c => c.style.transition = 'opacity 0.4s ease-in-out');
+                }, 50);
+            }
+            
             // Update URL hash without jumping
             history.replaceState(null, null, `#${tabId}`);
             
             // Scroll to top on tab change for better UX
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            if (!immediate) {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
         }
     }
 
@@ -39,17 +51,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 switchTab(tabId);
                 
                 // Close mobile menu if open
-                if (window.innerWidth <= 768) {
+                if (window.innerWidth <= 768 && navLinks) {
                     navLinks.classList.remove('mobile-active');
                 }
             }
         });
     });
 
-    // Handle initial hash in URL if any
+    // Handle initial hash in URL if any - RUN IMMEDIATELY
     const initialHash = window.location.hash.substring(1);
     if (initialHash && document.getElementById(initialHash)) {
-        setTimeout(() => switchTab(initialHash), 100);
+        switchTab(initialHash, true);
+    } else {
+        switchTab('home', true);
     }
 
     // 2. Mobile Menu Toggle
