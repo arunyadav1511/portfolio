@@ -25,6 +25,11 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 body {
     font-family: var(--font-body);
     color: var(--text-main);
@@ -77,6 +82,10 @@ body {
     color: var(--primary);
 }
 
+.logo a {
+    color: var(--primary);
+}
+
 .logo span { color: var(--accent); }
 
 .nav-links {
@@ -91,6 +100,7 @@ body {
     font-size: 0.95rem;
     padding: 8px 12px;
     border-radius: var(--radius-md);
+    transition: all 0.3s ease;
 }
 
 .nav-links a.active {
