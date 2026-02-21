@@ -74,19 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenu.addEventListener('click', () => {
             navLinks.classList.toggle('mobile-active');
             
-            // Inline style for quick toggle if CSS isn't handling it via class
+            // Toggle icon
+            const icon = mobileMenu.querySelector('i');
             if (navLinks.classList.contains('mobile-active')) {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '80px';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.background = '#fff';
-                navLinks.style.padding = '20px';
-                navLinks.style.borderBottom = '1px solid #E2E8F0';
+                icon.classList.replace('fa-bars', 'fa-xmark');
             } else {
-                navLinks.style.display = 'none';
+                icon.classList.replace('fa-xmark', 'fa-bars');
             }
         });
     }
