@@ -53,6 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Close mobile menu if open
                 if (window.innerWidth <= 768 && navLinks) {
                     navLinks.classList.remove('mobile-active');
+                    
+                    // Reset icon
+                    const icon = mobileMenu.querySelector('i');
+                    if (icon) {
+                        icon.classList.replace('fa-xmark', 'fa-bars');
+                    }
                 }
             }
         });
