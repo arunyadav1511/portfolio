@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         tabLinks.forEach(link => link.classList.remove('active'));
         tabContents.forEach(content => {
             content.classList.remove('active');
-            // Small timeout for better fade effect logic if needed
         });
 
         // Add active class to targeted tab
@@ -19,6 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (targetTab) {
             targetTab.classList.add('active');
             targetLinks.forEach(l => l.classList.add('active'));
+            
+            // Update URL hash without jumping
+            history.replaceState(null, null, `#${tabId}`);
             
             // Scroll to top on tab change for better UX
             window.scrollTo({
@@ -47,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle initial hash in URL if any
     const initialHash = window.location.hash.substring(1);
     if (initialHash && document.getElementById(initialHash)) {
-        switchTab(initialHash);
+        setTimeout(() => switchTab(initialHash), 100);
     }
 
     // 2. Mobile Menu Toggle
