@@ -75,14 +75,56 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Scroll effect for Navbar
-    window.addEventListener('scroll', () => {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 20) {
-            navbar.style.boxShadow = '0 10px 15px -3px rgba(0,0,0,0.05)';
-        } else {
-            navbar.style.boxShadow = 'none';
-        }
+    // 5. Contact Data Reveal & Copy Logic
+    const revealMethods = document.querySelectorAll('.reveals-data');
+
+    revealMethods.forEach(method => {
+        method.addEventListener('click', () => {
+            const val = method.getAttribute('data-value');
+            const label = method.querySelector('.method-label');
+            const dataSpan = method.querySelector('.method-data');
+
+            // Copy to clipboard
+            navigator.clipboard.writeText(val).then(() => {
+                const originalData = dataSpan.innerText;
+                dataSpan.innerText = 'Copied!';
+                method.classList.add('active-reveal');
+
+                setTimeout(() => {
+                    dataSpan.innerText = val;
+                }, 1000);
+
+                setTimeout(() => {
+                    method.classList.remove('active-reveal');
+                    dataSpan.innerText = originalData;
+                }, 3000);
+            });
+        });
+
+        // Mobile touch support to show data
+        method.addEventListener('touchstart', () => {
+            const dataSpan = method.querySelector('.method-data');
+            const val = method.getAttribute('data-value');
+            dataSpan.innerText = val;
+        });
+    });
+
+    // 6. Scroll Reveal for new sections
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.edu-card, .project-card, .skill-group').forEach(el => {
+        el.classList.add('reveal');
+        revealObserver.observe(el);
     });
 
 });
