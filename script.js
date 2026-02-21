@@ -75,37 +75,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. Contact Data Reveal & Copy Logic
+    // 5. Contact Data Reveal & Copy Logic V3.2
     const revealMethods = document.querySelectorAll('.reveals-data');
 
     revealMethods.forEach(method => {
-        method.addEventListener('click', () => {
-            const val = method.getAttribute('data-value');
-            const label = method.querySelector('.method-label');
-            const dataSpan = method.querySelector('.method-data');
+        const val = method.getAttribute('data-value');
+        const dataSpan = method.querySelector('.method-data');
+        const hintSpan = method.querySelector('.method-hint');
 
+        // Initial state: show data on hover (handled by CSS, but we set the text here)
+        dataSpan.innerText = val;
+
+        method.addEventListener('click', () => {
             // Copy to clipboard
             navigator.clipboard.writeText(val).then(() => {
+                const originalHint = hintSpan.innerText;
                 const originalData = dataSpan.innerText;
+
+                method.classList.add('copied');
                 dataSpan.innerText = 'Copied!';
-                method.classList.add('active-reveal');
+                hintSpan.innerText = 'Success';
 
                 setTimeout(() => {
-                    dataSpan.innerText = val;
-                }, 1000);
-
-                setTimeout(() => {
-                    method.classList.remove('active-reveal');
+                    method.classList.remove('copied');
                     dataSpan.innerText = originalData;
-                }, 3000);
+                    hintSpan.innerText = originalHint;
+                }, 2000);
             });
         });
 
-        // Mobile touch support to show data
-        method.addEventListener('touchstart', () => {
-            const dataSpan = method.querySelector('.method-data');
-            const val = method.getAttribute('data-value');
-            dataSpan.innerText = val;
+        // Mobile touch support: first tap reveals, second tap (click) copies
+        method.addEventListener('touchstart', (e) => {
+            // On mobile, the hover state isn't as clean, so let's let the click handle it
         });
     });
 

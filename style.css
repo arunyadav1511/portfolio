@@ -156,6 +156,23 @@ body {
 .hero-btns {
     display: flex;
     gap: 16px;
+    margin-bottom: 30px;
+}
+
+.hero-socials {
+    display: flex;
+    gap: 20px;
+    font-size: 1.5rem;
+}
+
+.hero-socials a {
+    color: var(--text-muted);
+    transition: all 0.3s ease;
+}
+
+.hero-socials a:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
 }
 
 .btn {
@@ -514,46 +531,63 @@ body {
     display: inline-block;
 }
 
-/* Contact Reveal V3.1 */
+/* Contact Reveal V3.2 (Hover to Reveal, Click to Copy) */
 .reveals-data {
     cursor: pointer;
     position: relative;
+    overflow: hidden;
 }
 
-.method-label {
-    transition: transform 0.3s ease, opacity 0.3s ease;
+.method-label, .method-data, .method-hint {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.method-data, .method-hint {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    opacity: 0;
 }
 
 .method-data {
-    position: absolute;
-    font-size: 0.85rem;
-    color: var(--accent);
+    top: 50%;
+    transform: translateY(20px);
+    font-size: 0.95rem;
     font-weight: 700;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
+    color: var(--accent);
 }
 
+.method-hint {
+    bottom: 20px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    transform: translateY(10px);
+}
+
+/* Hover State */
 .reveals-data:hover .method-label {
-    transform: translateY(-10px);
-    opacity: 0.3;
+    transform: translateY(-40px);
+    opacity: 0;
 }
 
 .reveals-data:hover .method-data {
     opacity: 1;
+    transform: translateY(-50%);
+}
+
+.reveals-data:hover .method-hint {
+    opacity: 0.7;
     transform: translateY(0);
 }
 
-.reveals-data.active-reveal .method-label {
-    display: none;
+/* Copy Success State */
+.reveals-data.copied .method-data {
+    color: #10B981; /* Success Green */
 }
 
-.reveals-data.active-reveal .method-data {
-    opacity: 1;
-    transform: translateY(-5px);
-    font-size: 0.95rem;
-    color: #fff;
-}
+/* Trailhead Branding */
+.trailhead-btn i { color: #00A1E0 !important; }
 
 /* Contact V3 */
 .contact-v3-hero {
